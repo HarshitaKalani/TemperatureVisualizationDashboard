@@ -1,5 +1,5 @@
 // Plot constants
-const MARGIN = { LEFT: 50, RIGHT: 50, TOP: 30, BOTTOM: 50 };
+const MARGIN = { LEFT: 50, RIGHT: 50, TOP: 40, BOTTOM: 50 };
 const WIDTH = 500 - MARGIN.LEFT - MARGIN.RIGHT;
 const HEIGHT = 400 - MARGIN.TOP - MARGIN.BOTTOM;
 
