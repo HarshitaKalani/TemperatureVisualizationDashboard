@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Temperature visualizer</title>
+    <!-- Styles -->
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* Custom styles for the sidebar */
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #333;
+        padding-top: 60px; /* Adjust as needed */
+        color: #fff;
+      }
+
+      .main-content {
+        margin-left: 250px; /* Same width as sidebar */
+        padding: 20px;
+      }
+
+      /* Styles for navbar links */
+      .nav-link {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Temperature <br> visualizer</a>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="countryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Country</a>
+            <ul id="country-list" class="dropdown-menu dropdown-menu-end scrollable-menu" aria-labelledby="countryDropdown"></ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="yearDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Year</a>
+            <ul id="year-list" class="dropdown-menu dropdown-menu-end scrollable-menu" aria-labelledby="yearDropdown"></ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="monthDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Month</a>
+            <ul id="month-list" class="dropdown-menu dropdown-menu-end" aria-labelledby="monthDropdown"></ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="main-content">
+      <!-- Your main content here -->
+      <div id="outerContainer">
+        <div class="centered-flex">
+          <div id="choroplethMap"></div>
+          <input type="range" value="0" class="slider" id="yearSlider" />
+          <button id="play-button" class="btn btn-outline-dark shadow-none">Pause</button>
+        </div>
+        <div id="chartContainer">
+          <div id="polarArea"></div>
+          <div id="areaChart"></div>
+          <div id="anomalyRadial"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
+
