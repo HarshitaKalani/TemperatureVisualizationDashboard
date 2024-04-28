@@ -45,6 +45,12 @@ Overall, the dashboard combines informative visualizations with user-friendly co
 ## Conclusion
 In conclusion, the development of this project dashboard has been a comprehensive journey integrating data visualization techniques using D3.js. The dashboard provides interactive and insightful visualizations of temperature and humidity data, allowing users to explore trends and correlations effectively.
 
+indert an image
+
+## Dashboard Preview
+
+![Dashboard Preview](dashboard.png)
+
 ## Submitted by
 Harshita Kalani (B20CS019)
 Shivi Mathur (B20CS067)
