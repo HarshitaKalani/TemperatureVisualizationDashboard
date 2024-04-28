@@ -1,7 +1,7 @@
 // Plot constants
-const MARGIN = { LEFT: 50, RIGHT: 50, TOP: 30, BOTTOM: 50 };
+const MARGIN = { LEFT: 50, RIGHT: 50, TOP: 40, BOTTOM: 50 };
 const WIDTH = 500 - MARGIN.LEFT - MARGIN.RIGHT;
-const HEIGHT = 400 - MARGIN.TOP - MARGIN.BOTTOM;
+const HEIGHT = 300 - MARGIN.TOP - MARGIN.BOTTOM;
 
 let svg, g, x, y, colorScale, xAxisGroup, yAxisGroup, title, subtitle, tooltip, tipData;
 let hovered = false;
@@ -33,13 +33,14 @@ function initChart(canvasElement) {
   // Color scale
   colorScale = d3.scaleSqrt()
     .domain([-30, 0, 35])
-    .range(["#1788de", "#3C81B7", "#CE241C"]);
+    .range(["#1788de", "#ffff8c", "#CE241C"]);
 
   // Axes initialization
   xAxisGroup = g.append("g")
-    .attr("class", "x axis")
-    .attr("transform", "translate(0," + HEIGHT + ")")
-    .call(d3.axisBottom(x));
+  .attr("class", "x axis")
+  .attr("transform", "translate(0," + (HEIGHT / 2) + ")") 
+  .call(d3.axisBottom(x));
+
 
   yAxisGroup = g.append("g")
     .attr("class", "y axis")
