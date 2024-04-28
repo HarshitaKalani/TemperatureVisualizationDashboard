@@ -40,7 +40,10 @@ Overall, the dashboard combines informative visualizations with user-friendly co
 
 ## How to run
 - Clone the repository by writing the command in terminal:`git clone https://github.com/HarshitaKalani/TemperatureVisualizationDashboard`
-- Simply run it using html server
+- Install Node.js, if not already installed
+- In the project directory, install http-server by writing the command in terminal: `npm install -g http-server`
+- Start the http-server using `http-server`
+- Open `http://localhost:8080`
   
 ## Conclusion
 In conclusion, the development of this project dashboard has been a comprehensive journey integrating data visualization techniques using D3.js. The dashboard provides interactive and insightful visualizations of temperature and humidity data, allowing users to explore trends and correlations effectively.
