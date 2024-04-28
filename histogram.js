@@ -37,10 +37,9 @@ function initChart(canvasElement) {
 
   // Axes initialization
   xAxisGroup = g.append("g")
-  .attr("class", "x axis")
-  .attr("transform", "translate(0," + (HEIGHT / 2) + ")") 
-  .call(d3.axisBottom(x));
-
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + HEIGHT + ")")
+    .call(d3.axisBottom(x));
 
   yAxisGroup = g.append("g")
     .attr("class", "y axis")
