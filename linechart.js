@@ -45,6 +45,12 @@ function initChart(canvasElement) {
     .attr("class", "y axis")
     .call(d3.axisLeft(y));
 
+  svg.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "middle")
+    .attr("transform", "translate(" + (MARGIN.LEFT / 2) + "," + (HEIGHT / 2) + ")rotate(-90)")
+    .text("Temperature(℃)");
+
   title = g.append("text")
     .attr("class", "title")
     .attr("x", WIDTH / 2)

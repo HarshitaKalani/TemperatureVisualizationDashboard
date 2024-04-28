@@ -1,8 +1,8 @@
 import * as areaChart from "./areaChart.js";
 import * as histogram from "./histogram.js";
+import * as textGraph from "./textGraph.js";
 import * as lineChart from "./linechart.js";
 import * as scatterPlot from "./scatter.js";
-import * as choroplethMap from "./choroplethMap.js";
 import * as anomalyScatter from "./anomalyScatter.js";
 
 const monthNames = [
@@ -34,11 +34,10 @@ slider.max = lastYear;
 // Init charts
 areaChart.initChart("#areaChart");
 histogram.initChart("#histogram");
+textGraph.initChart("#textGraph");
 lineChart.initChart("#lineChart");
 scatterPlot.initChart("#scatterPlot");
 anomalyScatter.initChart("#anomalyScatter");
-choroplethMap.initChart("#choroplethMap");
-
 // Datasets to load
 const dataPromises = [
   d3.csv("data/temp-1901-2020-all.csv"),
@@ -64,11 +63,11 @@ Promise.all(dataPromises).then(function (data) {
     const yearData = tempData.get(String(year));
     const countryData = yearData.get(country);
     histogram.updateChart(countryData);
+    textGraph.updateChart(countryData);
     lineChart.updateChart(countryData);
     scatterPlot.updateChart(countryData);
     areaChart.updateChart(countryData);
     anomalyScatter.updateChart(anomalyData, year);
-    choroplethMap.updateChart(topoData, yearData, month);
   }
   updateCharts();
 
