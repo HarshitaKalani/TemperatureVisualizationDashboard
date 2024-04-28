@@ -49,7 +49,7 @@ function initChart(canvasElement) {
   colorScale = d3
     .scaleLinear()
     .domain([-30, 0, 35])
-    .range(["#1788de", "#3C81B7", "#dc2f02"]);
+    .range(["#1788de", "#ffff8c", "#CE241C"]);
 
   // Legend
   const legend = g
@@ -90,7 +90,6 @@ function initChart(canvasElement) {
     .attr("transform", "translate(10,200)")
     .call(yAxis);
 
-  // Tooltip placeholder
   tooltip = d3.select(".tooltip");
 }
 

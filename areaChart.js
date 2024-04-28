@@ -1,5 +1,5 @@
 // Plot constants
-const MARGIN = {LEFT: 100, RIGHT: 20, TOP: 20, BOTTOM: 100};
+const MARGIN = {LEFT: 100, RIGHT: 20, TOP: 50, BOTTOM: 70};
 const WIDTH = 500 - MARGIN.LEFT - MARGIN.RIGHT;
 const HEIGHT = 300 - MARGIN.TOP - MARGIN.BOTTOM;
 
@@ -83,7 +83,7 @@ function initChart(canvasElement) {
     .selectAll("stop")
     .data([
       {offset: "0%", color: "#1788de"},
-      {offset: "50%", color: "#3C81B7"},
+      {offset: "50%", color: "#ffff8c"},
       {offset: "70%", color: "#CE241C"},
     ])
     .enter()
